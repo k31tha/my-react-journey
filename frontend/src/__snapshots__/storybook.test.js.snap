@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ClubLink Active Club 1`] = `
+<li
+  className=""
+>
+  <a
+    href="woking-fc"
+  >
+    Woking FC
+  </a>
+</li>
+`;
+
+exports[`Storyshots ClubLink In Active Club 1`] = `
+<li
+  className="InActiveClub"
+>
+  <a
+    href="leyton-orient-fc"
+  >
+    Leyton Orient FC
+  </a>
+</li>
+`;

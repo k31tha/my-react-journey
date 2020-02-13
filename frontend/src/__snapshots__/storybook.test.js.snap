@@ -23,3 +23,34 @@ exports[`Storyshots ClubLink In Active Club 1`] = `
   </a>
 </li>
 `;
+
+exports[`Storyshots ClubLinkList Default 1`] = `
+<ul>
+  <li
+    className=""
+  >
+    <a
+      href="woking-fc"
+    >
+      Woking FC
+    </a>
+  </li>
+  <li
+    className="InActiveClub"
+  >
+    <a
+      href="leyton-orient-fc"
+    >
+      Leyton Orient FC
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots ClubLinkList Empty 1`] = `
+<div
+  className="list-items"
+>
+  empty list
+</div>
+`;

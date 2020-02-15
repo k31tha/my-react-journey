@@ -1,6 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs/react';
-
+import { action } from '@storybook/addon-actions';
+import VisibilityFilters from './VisibilityFilters';
 import ClubFilterByStatus from './ClubFilterByStatus';
 
 export default {
@@ -11,25 +12,10 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const clubListData =
-  [{
-    name: 'Woking FC',
-    url: 'woking-fc',
-    active: true
-  },
-  {
-    name: 'Leyton Orient FC',
-    url: 'leyton-orient-fc',
-    active: false
-  },
-  {
-    name: 'Knaphill FC',
-    url: 'knaphill-fc',
-    active: true
-  }];
-
-export const Default = () => {
-  return <ClubFilterByStatus clubs={clubListData} />;
+export const actionsData = {
+  statusQuery: action('statusQuery'),
 };
 
-export const Empty = () => <ClubFilterByStatus clubs={[]} />;
+export const Default = () => {
+  return <ClubFilterByStatus statusFilterBy={VisibilityFilters.SHOW_ALL} {...actionsData} />;
+};

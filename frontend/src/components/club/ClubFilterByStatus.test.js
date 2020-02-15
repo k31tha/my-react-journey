@@ -1,37 +1,25 @@
 import React from 'react';
-import {render, cleanup} from '@testing-library/react';
+import {render, cleanup, fireEvent} from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
 import ClubFilterByStatus from './ClubFilterByStatus';
+import VisibilityFilters from './VisibilityFilters';
 
-describe('ClubFilterByStatus check render scenarios', () => {
+describe('ClubFilterByStatus check render', () => {
 afterEach(cleanup);
-test('shows the list of clubs', () => {
-  const clubListData = [{
-    name: 'Woking FC',
-    url: 'woking-fc',
-    active: true
-  },
-  {
-    name: 'Leyton Orient FC',
-    url: 'leyton-orient-fc',
-    active: false
-  },
-  {
-    name: 'Knaphill FC',
-    url: 'knaphill-fc',
-    active: true
-  }
-];
-
-  const { getByText } = render(<ClubFilterByStatus clubs={clubListData} />);
-  expect(getByText(clubListData[0].name)).toBeInTheDocument();
+test ('shows the filter buttons', () => {
+  const { getByText } = render(<ClubFilterByStatus statusFilterBy={VisibilityFilters.SHOW_ALL} statusQuery={console.log} />);
+  expect(getByText('InActive')).toBeInTheDocument();
+  expect(getByText('Active')).toBeInTheDocument();
+  expect(getByText('All')).toBeInTheDocument();
 });
 
-test('shows the empty list of clubs', () => {
-  const clubListData = [];
-
-  const { getByText } = render(<ClubFilterByStatus clubs={clubListData} />);
-  expect(getByText('empty list')).toBeInTheDocument();
+test ('check the filter button is called', () => {
+  const spy = jest.fn();
+  const { getByText } = render(<ClubFilterByStatus statusFilterBy={VisibilityFilters.SHOW_ALL} statusQuery={spy} />);
+  fireEvent.click(getByText('Active'));
+  fireEvent.click(getByText('InActive'));
+  fireEvent.click(getByText('All'));
+  expect(spy).toHaveBeenCalledTimes(3);
 });
 
 });

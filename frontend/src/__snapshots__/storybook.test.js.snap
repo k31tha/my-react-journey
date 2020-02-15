@@ -17,60 +17,6 @@ Array [
   >
     All
   </button>,
-  <ul>
-    <li
-      className=""
-    >
-      <a
-        href="woking-fc"
-      >
-        Woking FC
-      </a>
-    </li>
-    <li
-      className="InActiveClub"
-    >
-      <a
-        href="leyton-orient-fc"
-      >
-        Leyton Orient FC
-      </a>
-    </li>
-    <li
-      className=""
-    >
-      <a
-        href="knaphill-fc"
-      >
-        Knaphill FC
-      </a>
-    </li>
-  </ul>,
-]
-`;
-
-exports[`Storyshots ClubFilterByStatus Empty 1`] = `
-Array [
-  <button
-    onClick={[Function]}
-  >
-    Active
-  </button>,
-  <button
-    onClick={[Function]}
-  >
-    InActive
-  </button>,
-  <button
-    onClick={[Function]}
-  >
-    All
-  </button>,
-  <div
-    className="list-items"
-  >
-    empty list
-  </div>,
 ]
 `;
 
@@ -127,4 +73,78 @@ exports[`Storyshots ClubLinkList Empty 1`] = `
 >
   empty list
 </div>
+`;
+
+exports[`Storyshots ClubSearch Default 1`] = `
+Array [
+  <button
+    onClick={[Function]}
+  >
+    Active
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    InActive
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    All
+  </button>,
+  <ul>
+    <li
+      className=""
+    >
+      <a
+        href="woking-fc"
+      >
+        Woking FC
+      </a>
+    </li>
+    <li
+      className="InActiveClub"
+    >
+      <a
+        href="leyton-orient-fc"
+      >
+        Leyton Orient FC
+      </a>
+    </li>
+    <li
+      className=""
+    >
+      <a
+        href="knaphill-fc"
+      >
+        Knaphill FC
+      </a>
+    </li>
+  </ul>,
+]
+`;
+
+exports[`Storyshots ClubSearch Empty 1`] = `
+Array [
+  <button
+    onClick={[Function]}
+  >
+    Active
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    InActive
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    All
+  </button>,
+  <div
+    className="list-items"
+  >
+    empty list
+  </div>,
+]
 `;

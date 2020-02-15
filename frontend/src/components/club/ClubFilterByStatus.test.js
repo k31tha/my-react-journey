@@ -7,7 +7,8 @@ import VisibilityFilters from './VisibilityFilters';
 describe('ClubFilterByStatus check render', () => {
 afterEach(cleanup);
 test ('shows the filter buttons', () => {
-  const { getByText } = render(<ClubFilterByStatus statusFilterBy={VisibilityFilters.SHOW_ALL} statusQuery={console.log} />);
+  const spy = jest.fn();
+  const { getByText } = render(<ClubFilterByStatus statusFilterBy={VisibilityFilters.SHOW_ALL} statusQuery={spy} />);
   expect(getByText('InActive')).toBeInTheDocument();
   expect(getByText('Active')).toBeInTheDocument();
   expect(getByText('All')).toBeInTheDocument();

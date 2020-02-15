@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import VisibilityFilters from './VisibilityFilters';
 
@@ -16,6 +16,11 @@ const ClubFilterByStatus = ({statusFilterBy, statusQuery}) => {
     <FilterButton filterStatus={VisibilityFilters.SHOW_ALL} statusFilterBy={statusFilterBy} statusQuery={statusQuery}>All</FilterButton>
     </>
   );
+}
+
+PropTypes.ClubFilterByStatus = {
+  statusFilterBy: PropTypes.string.isRequired,
+  statusQuery: PropTypes.func
 }
 
 export default ClubFilterByStatus;

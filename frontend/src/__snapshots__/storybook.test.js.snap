@@ -77,6 +77,15 @@ exports[`Storyshots ClubLinkList Empty 1`] = `
 
 exports[`Storyshots ClubSearch Default 1`] = `
 Array [
+  "Search by:",
+  <input
+    aria-label="club-search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />,
+  <br />,
+  <br />,
   <button
     onClick={[Function]}
   >
@@ -92,6 +101,7 @@ Array [
   >
     All
   </button>,
+  <br />,
   <ul>
     <li
       className=""
@@ -126,6 +136,15 @@ Array [
 
 exports[`Storyshots ClubSearch Empty 1`] = `
 Array [
+  "Search by:",
+  <input
+    aria-label="club-search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />,
+  <br />,
+  <br />,
   <button
     onClick={[Function]}
   >
@@ -141,10 +160,23 @@ Array [
   >
     All
   </button>,
+  <br />,
   <div
     className="list-items"
   >
     empty list
   </div>,
+]
+`;
+
+exports[`Storyshots ClubSearchByName Default 1`] = `
+Array [
+  "Search:",
+  <input
+    aria-label="club-search"
+    onChange={[Function]}
+    type="text"
+    value="Knaphill"
+  />,
 ]
 `;

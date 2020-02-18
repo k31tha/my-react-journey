@@ -6,7 +6,7 @@ const ClubLink = ( {clublink: { url, name, active} }) => {
         <li className={active?'':'InActiveClub'} key={name}><a href={url}>
             {name}
         </a></li>
-    )
+    );
 }
 
 ClubLink.propTypes = {
@@ -17,4 +17,4 @@ ClubLink.propTypes = {
   })
 }
 
-export default ClubLink
+export default ClubLink;

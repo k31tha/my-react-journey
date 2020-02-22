@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, object } from '@storybook/addon-knobs/react';
-import { action } from '@storybook/addon-actions';
+//import { action } from '@storybook/addon-actions';
 
 import ClubDetail from './ClubDetail';
 
@@ -23,6 +23,10 @@ export const clubDetailData = {
 
 export const ActiveClub = () => {
   return <ClubDetail clubdetail={object('clubdetail',{ ...clubDetailData })} />;
+};
+
+export const ActiveClubNoKnobs = () => {
+  return <ClubDetail clubdetail={clubDetailData} />;
 };
 
 export const clubDetailWithNoWebsiteData = {

@@ -1,13 +1,11 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import {MemoryRouter} from 'react-router-dom';
 import { action } from '@storybook/addon-actions';
 import ClubSearch from './ClubSearch';
 
 export default {
   component: ClubSearch,
   title: 'ClubSearch',
-  decorators: [withKnobs],
-  // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };
 
@@ -34,9 +32,17 @@ export const actionsData = {
 };
 
 export const Default = () => {
-  return <ClubSearch clubs={clubListData} />;
+  return (<MemoryRouter><ClubSearch clubs={clubListData} /></MemoryRouter>);
 };
 
+//Default.story = {
+//  decorators: [StoryRouter({})]
+//}
+
 export const Empty = () => {
-  return <ClubSearch clubs={[]} />;
+  return (<MemoryRouter><ClubSearch clubs={[]} /></MemoryRouter>);
 };
+
+//Empty.story = {
+//  decorators: [StoryRouter({})]
+//}

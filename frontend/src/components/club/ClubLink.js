@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom';
 
 const ClubLink = ( {clublink: { url, name, active} }) => {
     return (
-        <li className={active?'':'InActiveClub'} key={name}><a href={url}>
+        <li className={active?'':'InActiveClub'} key={name}><Link to={'club/'+url}>
             {name}
-        </a></li>
+        </Link></li>
     );
 }
 

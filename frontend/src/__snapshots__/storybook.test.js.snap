@@ -17,6 +17,33 @@ exports[`Storyshots ClubDetail Active Club 1`] = `
      
     <a
       href="https://wokingfc.co.uk/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      https://wokingfc.co.uk/
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ClubDetail Active Club No Knobs 1`] = `
+<div>
+  <h1>
+    Woking FC
+  </h1>
+  <span>
+    <img
+      alt="Woking FC"
+      src="/assets/logos/WokingLogo.png"
+    />
+  </span>
+  <br />
+  <span>
+    official website:
+     
+    <a
+      href="https://wokingfc.co.uk/"
+      rel="noopener noreferrer"
       target="_blank"
     >
       https://wokingfc.co.uk/
@@ -62,7 +89,8 @@ exports[`Storyshots ClubLink Active Club 1`] = `
   className=""
 >
   <a
-    href="woking-fc"
+    href="/club/woking-fc"
+    onClick={[Function]}
   >
     Woking FC
   </a>
@@ -74,7 +102,8 @@ exports[`Storyshots ClubLink In Active Club 1`] = `
   className="InActiveClub"
 >
   <a
-    href="leyton-orient-fc"
+    href="/club/leyton-orient-fc"
+    onClick={[Function]}
   >
     Leyton Orient FC
   </a>
@@ -87,7 +116,8 @@ exports[`Storyshots ClubLinkList Default 1`] = `
     className=""
   >
     <a
-      href="woking-fc"
+      href="/club/woking-fc"
+      onClick={[Function]}
     >
       Woking FC
     </a>
@@ -96,7 +126,8 @@ exports[`Storyshots ClubLinkList Default 1`] = `
     className="InActiveClub"
   >
     <a
-      href="leyton-orient-fc"
+      href="/club/leyton-orient-fc"
+      onClick={[Function]}
     >
       Leyton Orient FC
     </a>
@@ -144,7 +175,8 @@ Array [
       className=""
     >
       <a
-        href="woking-fc"
+        href="/club/woking-fc"
+        onClick={[Function]}
       >
         Woking FC
       </a>
@@ -153,7 +185,8 @@ Array [
       className="InActiveClub"
     >
       <a
-        href="leyton-orient-fc"
+        href="/club/leyton-orient-fc"
+        onClick={[Function]}
       >
         Leyton Orient FC
       </a>
@@ -162,7 +195,8 @@ Array [
       className=""
     >
       <a
-        href="knaphill-fc"
+        href="/club/knaphill-fc"
+        onClick={[Function]}
       >
         Knaphill FC
       </a>
@@ -216,4 +250,139 @@ Array [
     value="Knaphill"
   />,
 ]
+`;
+
+exports[`Storyshots SiteRoutes Club Page 1`] = `
+<div>
+  <h1>
+    Woking FC
+  </h1>
+  <span>
+    <img
+      alt="Woking FC"
+      src="/assets/logos/WokingLogo.png"
+    />
+  </span>
+  <br />
+  <span>
+    official website:
+     
+    <a
+      href="https://wokingfc.co.uk/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      https://wokingfc.co.uk/
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots SiteRoutes Club Page Not Found 1`] = `
+<p>
+  Page Not Found
+</p>
+`;
+
+exports[`Storyshots SiteRoutes Default 1`] = `
+Array [
+  "Search by:",
+  <input
+    aria-label="club-search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />,
+  <br />,
+  <br />,
+  <button
+    onClick={[Function]}
+  >
+    Active
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    InActive
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    All
+  </button>,
+  <br />,
+  <ul>
+    <li
+      className=""
+    >
+      <a
+        href="/club/woking-fc"
+        onClick={[Function]}
+      >
+        Woking FC
+      </a>
+    </li>
+    <li
+      className="InActiveClub"
+    >
+      <a
+        href="/club/leyton-orient-fc"
+        onClick={[Function]}
+      >
+        Leyton Orient FC
+      </a>
+    </li>
+    <li
+      className=""
+    >
+      <a
+        href="/club/knaphill-fc"
+        onClick={[Function]}
+      >
+        Knaphill FC
+      </a>
+    </li>
+  </ul>,
+]
+`;
+
+exports[`Storyshots SiteRoutes Empty 1`] = `
+Array [
+  "Search by:",
+  <input
+    aria-label="club-search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />,
+  <br />,
+  <br />,
+  <button
+    onClick={[Function]}
+  >
+    Active
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    InActive
+  </button>,
+  <button
+    onClick={[Function]}
+  >
+    All
+  </button>,
+  <br />,
+  <div
+    className="list-items"
+  >
+    empty list
+  </div>,
+]
+`;
+
+exports[`Storyshots SiteRoutes Page Not Found 1`] = `
+<p>
+  Page Not Found
+</p>
 `;

@@ -8,7 +8,7 @@ const OfficialWebsite = ({ clubofficialwebsiteurl }) => {
   return (
     <span>
       official website:{" "}
-      <a href={clubofficialwebsiteurl} target="_blank">
+      <a href={clubofficialwebsiteurl} target="_blank" rel="noopener noreferrer">
         {clubofficialwebsiteurl}
       </a>
     </span>

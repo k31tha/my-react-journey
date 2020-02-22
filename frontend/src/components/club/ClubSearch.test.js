@@ -1,6 +1,7 @@
 import React from 'react';
 import {render, cleanup, fireEvent} from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
+import {MemoryRouter} from 'react-router-dom';
 import ClubSearch from './ClubSearch';
 
 const clubListData = [{
@@ -23,14 +24,14 @@ describe('ClubSearch', () => {
 afterEach(cleanup);
 test('shows the list of clubs', () => {
 
-  const { getByText,queryByText } = render(<ClubSearch clubs={clubListData} />);
+  const { getByText,queryByText } = render(<MemoryRouter><ClubSearch clubs={clubListData} /></MemoryRouter>);
   expect(getByText(clubListData[2].name)).toBeInTheDocument();
   expect(queryByText('Liverpool')).toBeNull();
 });
 
 test('filter the list of clubs by status', () => {
 
-  const { getByText,queryByText } = render(<ClubSearch clubs={clubListData} />);
+  const { getByText,queryByText } = render(<MemoryRouter><ClubSearch clubs={clubListData} /></MemoryRouter>);
   fireEvent.click(getByText('InActive'));
   expect(queryByText(clubListData[1].name)).toBeInTheDocument();
   expect(queryByText(clubListData[0].name)).toBeNull();
@@ -41,7 +42,7 @@ test('filter the list of clubs by status', () => {
 
 test('filter the list of clubs by name', () => {
 
-  const { getByText,queryByText,getByLabelText,debug } = render(<ClubSearch clubs={clubListData} />);
+  const { getByText,queryByText,getByLabelText,debug } = render(<MemoryRouter><ClubSearch clubs={clubListData} /></MemoryRouter>);
   const input = getByLabelText('club-search');
   fireEvent.change(input,{ target: { value: 'Knaphill' } });
   expect(queryByText(clubListData[2].name)).toBeInTheDocument();
@@ -52,7 +53,7 @@ test('filter the list of clubs by name', () => {
 
 test('filter the list of clubs by name and status', () => {
 
-  const { getByText,queryByText,getByLabelText,debug } = render(<ClubSearch clubs={clubListData} />);
+  const { getByText,queryByText,getByLabelText,debug } = render(<MemoryRouter><ClubSearch clubs={clubListData} /></MemoryRouter>);
   const input = getByLabelText('club-search');
   fireEvent.change(input,{ target: { value: 'leyton' } });
   expect(queryByText(clubListData[1].name)).toBeInTheDocument();
@@ -66,7 +67,7 @@ test('filter the list of clubs by name and status', () => {
 
 test('shows the empty list of clubs', () => {
   const clubListDataEmpty = [];
-  const { getByText } = render(<ClubSearch clubs={clubListDataEmpty} />);
+  const { getByText } = render(<MemoryRouter><ClubSearch clubs={clubListDataEmpty} /></MemoryRouter>);
   expect(getByText('empty list')).toBeInTheDocument();
 });
 

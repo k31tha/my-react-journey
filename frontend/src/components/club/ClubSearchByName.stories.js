@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
+import StoryRouter from 'storybook-react-router';
 import ClubSearchByName from './ClubSearchByName';
 
 export default {
   component: ClubSearchByName,
   title: 'ClubSearchByName',
-  decorators: [withKnobs],
+  decorators: [withKnobs,StoryRouter()],
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };
@@ -19,7 +20,6 @@ export const actionsData = {
 
 export const Default = () => {
   const nameSearch = 'Knaphill';
-  const handleChange = event => action(event.target.value);
   
   return <ClubSearchByName nameSearch={nameSearch} {...actionsData}>Search:</ClubSearchByName>;
 };

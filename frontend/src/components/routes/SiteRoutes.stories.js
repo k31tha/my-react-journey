@@ -89,14 +89,15 @@ PageNotFound.story = {
 };
 
 
-export const Empty = () => {
-  return (
-<SiteRoutes clubs={[]} />
-  );
-}
+// No longer relevant as clubs are not passed through
+// export const Empty = () => {
+//   return (
+// <SiteRoutes clubs={[]} />
+//   );
+// }
 
-Empty.story = {
-  decorators: [
-  StoryRouter({})
-  ]
-};
+// Empty.story = {
+//   decorators: [
+//   StoryRouter({})
+//   ]
+// };

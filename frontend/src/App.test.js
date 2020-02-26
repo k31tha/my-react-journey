@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders learn react link', async () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Search by/i);
-  expect(linkElement).toBeInTheDocument();
+  // initially loading should appear
+  expect(getByText(/Loading/i)).toBeInTheDocument();
+  // wait for Search By to appear
+  await wait(() => {
+    expect(getByText(/Search by/i)).toBeInTheDocument();
+  })
+
 });

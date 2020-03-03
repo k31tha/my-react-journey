@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import ClubSearch from '../components/club/ClubSearch';
+import useClubsApi from '../hooks/useClubsApi';
 
 const clubListData =
   [{
@@ -26,7 +27,7 @@ const clubListData =
 ];
 
 const ClubSearchContainer = () => {
-    const [clubs,setClubs] = useState([]);
+    /* const [clubs,setClubs] = useState([]);
     const [clubsLoading,setClubsLoading] = useState(true);
 
     useEffect(() => {
@@ -36,9 +37,10 @@ const ClubSearchContainer = () => {
             console.log('This will execute after 2 seconds!')
         }, 2000);
         return () => clearTimeout(timer);
-      }, []);
+      }, []); */
+      const [{ clubs, isLoading, isError }] = useClubsApi(clubListData);
 
-    if (clubsLoading) {
+    if (isLoading) {
         return (
             <p>Loading......</p>
         );

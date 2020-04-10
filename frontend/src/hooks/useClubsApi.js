@@ -1,4 +1,5 @@
 import React, {useState,useEffect,useReducer} from "react";
+import axios from 'axios';
 import clubFetchReducer from "../reducers/clubFetchReducer";
 
 const useClubsApi = (initialClubs) => {
@@ -7,7 +8,7 @@ const useClubsApi = (initialClubs) => {
     //const [isError, setIsError] = useState(false);
 
     const [state, dispatch] = useReducer(clubFetchReducer, {
-        isLoading: false,
+        isLoading: true,
         isError: false,
         clubs: initialClubs,
       });
@@ -28,14 +29,14 @@ const useClubsApi = (initialClubs) => {
     }, []);
     return [{ clubs, isLoading, isError }];
   } */
-
+  const url='http://localhost:3090/clubs';
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_INIT' });
       try {
-        //const result = await axios(url);
-        //dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
-        dispatch({ type: 'FETCH_SUCCESS', payload: initialClubs });
+        const result = await axios(url);
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+        //dispatch({ type: 'FETCH_SUCCESS', payload: initialClubs });
       } catch (error) {
         dispatch({ type: 'FETCH_FAILURE' });
       }
@@ -46,4 +47,4 @@ const useClubsApi = (initialClubs) => {
   return [state];
 }
 
-  export default useClubsApi;
+export default useClubsApi;

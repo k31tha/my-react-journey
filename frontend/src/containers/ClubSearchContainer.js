@@ -27,6 +27,8 @@ const clubListData =
 ];
 
 const ClubSearchContainer = () => {
+  console.log("ClubSearchContainer");
+  const [{ clubs, isLoading, isError }] = useClubsApi();
     /* const [clubs,setClubs] = useState([]);
     const [clubsLoading,setClubsLoading] = useState(true);
 
@@ -38,7 +40,6 @@ const ClubSearchContainer = () => {
         }, 2000);
         return () => clearTimeout(timer);
       }, []); */
-      const [{ clubs, isLoading, isError }] = useClubsApi(clubListData);
 
     if (isLoading) {
         return (

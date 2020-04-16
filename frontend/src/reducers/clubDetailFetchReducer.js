@@ -1,20 +1,19 @@
-const clubFetchReducer = (state, action) => {
+const clubDetailFetchReducer = (state, action) => {
   switch (action.type) {
-    case "CLUBLIST_FETCH_INIT":
     case "CLUB_FETCH_INIT":
       return { ...state, isLoading: true, isError: false };
-    case "CLUBLIST_FETCH_SUCCESS":
+    case "CLUB_FETCH_SUCCESS":
       return {
         ...state,
         isLoading: false,
         isError: false,
-        clubs: action.payload
+        clubDetail: action.payload
       };
-    case "CLUBLIST_FETCH_FAILURE":
+    case "CLUB_FETCH_FAILURE":
       return { ...state, isLoading: false, isError: true };
     default:
       return { ...state };
   }
 };
 
-export default clubFetchReducer;
+export default clubDetailFetchReducer;

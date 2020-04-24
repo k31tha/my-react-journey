@@ -31,7 +31,7 @@ const ClubDetail = ({
   clubdetail: { name, active, clubofficialwebsiteurl, logoname }
 }) => {
   return (
-    <div>
+    <div data-testid="clubdetail">
       <h1>{name}</h1>
       <ClubLogo logoname={logoname} clubname={name}/>
       <br />

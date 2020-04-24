@@ -4,7 +4,7 @@ import ClubSearchContainer from "../../containers/ClubSearchContainer";
 import ClubDetailsContainer from "../../containers/ClubDetailsContainer";
 import NotFound from "../../containers/NotFound";
 
-export function SiteRoutes({ clubs }) {
+export function SiteRoutes() {
   return (
     <>
       <Switch>

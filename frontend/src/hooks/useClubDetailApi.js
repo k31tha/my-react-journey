@@ -11,12 +11,11 @@ const useClubDetailApi = (clubUrl) => {
       });
 
 const url='http://localhost:3090/clubs/'+clubUrl;
-
 useEffect(() => {
   async function fetchData() {
     dispatch({ type: 'CLUB_FETCH_INIT' });
     try {
-      const response = await axios(
+      const response = await axios.get(
         url
     );
     dispatch({ type: 'CLUB_FETCH_SUCCESS', payload: response.data });

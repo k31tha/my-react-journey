@@ -10,7 +10,7 @@ const ClubDetailsContainer = ({clubUrl}) => {
 
     if (isLoading) {
         return (
-            <p>Loading......</p>
+            <p>Loading...</p>
         );
     }
 

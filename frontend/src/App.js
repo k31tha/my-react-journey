@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { SiteRoutes } from './components/routes/SiteRoutes';
 
 export const clubListData =
@@ -31,7 +31,7 @@ function App() {
   return (
     <Router>
     <div>
-      <SiteRoutes clubs={clubListData} />
+      <SiteRoutes />
     </div>
     </Router>
   );

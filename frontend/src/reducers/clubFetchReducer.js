@@ -1,6 +1,5 @@
 const clubFetchReducer = (state, action) => {
   switch (action.type) {
-    case "CLUBLIST_FETCH_INIT":
     case "CLUB_FETCH_INIT":
       return { ...state, isLoading: true, isError: false };
     case "CLUBLIST_FETCH_SUCCESS":

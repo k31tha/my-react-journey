@@ -42,7 +42,7 @@ export const actionsData = {
 
 export const Default = () => {
   return (
-  <SiteRoutes clubs={clubListData} />
+  <SiteRoutes />
   );
 };
 
@@ -54,7 +54,7 @@ Default.story = {
 
 export const ClubPage = () => {
   return (
-  <SiteRoutes clubs={clubListData} />
+  <SiteRoutes />
   );
 };
 
@@ -66,7 +66,7 @@ ClubPage.story = {
 
 export const ClubPageNotFound = () => {
   return (
-  <SiteRoutes clubs={clubListData} />
+  <SiteRoutes />
   );
 };
 
@@ -78,7 +78,7 @@ ClubPageNotFound.story = {
 
 export const PageNotFound = () => {
   return (
-  <SiteRoutes clubs={clubListData} />
+  <SiteRoutes />
   );
 };
 

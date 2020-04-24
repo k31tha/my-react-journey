@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ClubDetail Active Club 1`] = `
-<div>
+<div
+  data-testid="clubdetail"
+>
   <h1>
     Woking FC
   </h1>
@@ -27,7 +29,9 @@ exports[`Storyshots ClubDetail Active Club 1`] = `
 `;
 
 exports[`Storyshots ClubDetail Active Club No Knobs 1`] = `
-<div>
+<div
+  data-testid="clubdetail"
+>
   <h1>
     Woking FC
   </h1>
@@ -53,7 +57,9 @@ exports[`Storyshots ClubDetail Active Club No Knobs 1`] = `
 `;
 
 exports[`Storyshots ClubDetail Active Club With No Website 1`] = `
-<div>
+<div
+  data-testid="clubdetail"
+>
   <h1>
     Woking FC
   </h1>
@@ -111,7 +117,9 @@ exports[`Storyshots ClubLink In Active Club 1`] = `
 `;
 
 exports[`Storyshots ClubLinkList Default 1`] = `
-<ul>
+<ul
+  data-testid="search-club-list"
+>
   <li
     className=""
   >
@@ -138,6 +146,7 @@ exports[`Storyshots ClubLinkList Default 1`] = `
 exports[`Storyshots ClubLinkList Empty 1`] = `
 <div
   className="list-items"
+  data-testid="empty-club-list"
 >
   empty list
 </div>
@@ -170,7 +179,9 @@ Array [
     All
   </button>,
   <br />,
-  <ul>
+  <ul
+    data-testid="search-club-list"
+  >
     <li
       className=""
     >
@@ -234,6 +245,7 @@ Array [
   <br />,
   <div
     className="list-items"
+    data-testid="empty-club-list"
   >
     empty list
   </div>,
@@ -254,13 +266,13 @@ Array [
 
 exports[`Storyshots SiteRoutes Club Page 1`] = `
 <p>
-  Loading......
+  Loading...
 </p>
 `;
 
 exports[`Storyshots SiteRoutes Club Page Not Found 1`] = `
 <p>
-  Loading......
+  Loading...
 </p>
 `;
 
@@ -271,7 +283,9 @@ exports[`Storyshots SiteRoutes Default 1`] = `
 `;
 
 exports[`Storyshots SiteRoutes Page Not Found 1`] = `
-<p>
+<p
+  data-testid="not-found"
+>
   Page Not Found
 </p>
 `;

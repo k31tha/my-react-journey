@@ -4,10 +4,10 @@ import ClubLink from './ClubLink';
 
 const ClubLinkList = ( {clubs} ) => {
   if (clubs.length === 0) {
-    return <div className="list-items">empty list</div>;
+    return <div data-testid="empty-club-list" className="list-items">empty list</div>;
   }
   return(
-    <ul>
+    <ul data-testid="search-club-list">
     {clubs.map(club => (
         <ClubLink key={club.url} clublink={club} />
       ))}

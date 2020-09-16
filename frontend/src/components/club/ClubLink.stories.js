@@ -10,6 +10,7 @@ export default {
   component: ClubLink,
   title: 'ClubLink',
   //decorators: [withKnobs,StoryRouter()],
+  decorators: [withKnobs,StoryRouter()],
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };

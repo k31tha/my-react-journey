@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, object } from '@storybook/addon-knobs/react';
+import { withKnobs, object } from '@storybook/addon-knobs';
 //import { action } from '@storybook/addon-actions';
 
 import ClubDetail from './ClubDetail';

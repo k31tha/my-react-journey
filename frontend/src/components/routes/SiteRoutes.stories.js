@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
 import { SiteRoutes } from './SiteRoutes';
@@ -7,7 +7,7 @@ import { SiteRoutes } from './SiteRoutes';
 export default {
   component: SiteRoutes,
   title: 'SiteRoutes',
-  decorators: [withKnobs],
+  //decorators: [withKnobs],
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };

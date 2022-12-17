@@ -6,12 +6,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
-    jobs:
+jobs:
 #      - node/test:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
@@ -20,16 +15,25 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
 #          pkg-manager: yarn
 #          app-dir: '~/project/frontend'
-      - build_and_test:
-          executor: node/default
-          steps:
-            - checkout
-            - node/install-packages:
-              pkg-manager: yarn
-            - store_test_results:
-                root: '~/project'
-                paths:
-                  - .
-            - run:
-              command: yarn test
-              name: Run tests
+  build_and_test:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+#      - store_test_results:
+#          root: '~/project'
+#          paths:
+#              - .
+      - run:
+          command: yarn test
+          name: Run tests
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - build_and_test
+    

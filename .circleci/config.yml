@@ -16,9 +16,6 @@ jobs:
   #          pkg-manager: yarn
   #          app-dir: '~/project/frontend'
   build_and_test:
-    branches:
-      only:
-        - develop
     executor: node/default
     steps:
       - checkout
@@ -39,4 +36,8 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - build_and_test
+      - build_and_test:
+          filters:
+            branches:
+              only:
+                master

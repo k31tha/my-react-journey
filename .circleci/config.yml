@@ -21,7 +21,6 @@ jobs:
       - checkout
       - node/install-packages:
           app-dir: '~/project/frontend'
-          version: '16.10'
           pkg-manager: yarn
 #      - store_test_results:
 #          root: '~/project'

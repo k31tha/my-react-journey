@@ -7,25 +7,28 @@ orbs:
   node: circleci/node@5.0.3
 
 jobs:
-#      - node/test:
-          # This is the node version to use for the `cimg/node` tag
-          # Relevant tags can be found on the CircleCI Developer Hub
-          # https://circleci.com/developer/images/image/cimg/node
-#          version: '16.10'
-          # If you are using yarn, change the line below from "npm" to "yarn"
-#          pkg-manager: yarn
-#          app-dir: '~/project/frontend'
+  #      - node/test:
+  # This is the node version to use for the `cimg/node` tag
+  # Relevant tags can be found on the CircleCI Developer Hub
+  # https://circleci.com/developer/images/image/cimg/node
+  #          version: '16.10'
+  # If you are using yarn, change the line below from "npm" to "yarn"
+  #          pkg-manager: yarn
+  #          app-dir: '~/project/frontend'
   build_and_test:
+    branches:
+      only:
+        - develop
     executor: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: '~/project/frontend'
+          app-dir: "~/project/frontend"
           pkg-manager: yarn
-#      - store_test_results:
-#          root: '~/project'
-#          paths:
-#              - .
+      #      - store_test_results:
+      #          root: '~/project'
+      #          paths:
+      #              - .
       - run:
           command: cd frontend; yarn test
           name: Run tests
@@ -37,4 +40,3 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build_and_test
-    

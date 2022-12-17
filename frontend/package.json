@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test -u",
     "test:coverage": "set CI=true && react-scripts test --coverage --coverageReporters=text-lcov | coveralls",
     "test:coveragelocal": "set CI=true && react-scripts test --coverage",
     "eject": "react-scripts eject",

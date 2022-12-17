@@ -4,13 +4,10 @@ exports[`Storyshots ClubDetail Active Club 1`] = `
 <div
   data-testid="clubdetail"
 >
-  <h1>
-    Woking FC
-  </h1>
+  <h1 />
   <span>
     <img
-      alt="Woking FC"
-      src="/assets/logos/WokingLogo.png"
+      src="/assets/logos/undefined"
     />
   </span>
   <br />
@@ -18,12 +15,9 @@ exports[`Storyshots ClubDetail Active Club 1`] = `
     official website:
      
     <a
-      href="https://wokingfc.co.uk/"
       rel="noopener noreferrer"
       target="_blank"
-    >
-      https://wokingfc.co.uk/
-    </a>
+    />
   </span>
 </div>
 `;
@@ -32,13 +26,10 @@ exports[`Storyshots ClubDetail Active Club No Knobs 1`] = `
 <div
   data-testid="clubdetail"
 >
-  <h1>
-    Woking FC
-  </h1>
+  <h1 />
   <span>
     <img
-      alt="Woking FC"
-      src="/assets/logos/WokingLogo.png"
+      src="/assets/logos/undefined"
     />
   </span>
   <br />
@@ -46,12 +37,9 @@ exports[`Storyshots ClubDetail Active Club No Knobs 1`] = `
     official website:
      
     <a
-      href="https://wokingfc.co.uk/"
       rel="noopener noreferrer"
       target="_blank"
-    >
-      https://wokingfc.co.uk/
-    </a>
+    />
   </span>
 </div>
 `;
@@ -60,12 +48,20 @@ exports[`Storyshots ClubDetail Active Club With No Website 1`] = `
 <div
   data-testid="clubdetail"
 >
-  <h1>
-    Woking FC
-  </h1>
+  <h1 />
+  <span>
+    <img
+      src="/assets/logos/undefined"
+    />
+  </span>
   <br />
   <span>
-    official website: not known
+    official website:
+     
+    <a
+      rel="noopener noreferrer"
+      target="_blank"
+    />
   </span>
 </div>
 `;

@@ -27,7 +27,7 @@ jobs:
 #          paths:
 #              - .
       - run:
-          command: cd '~/project/frontend'; yarn test
+          command: cd frontend; yarn test
           name: Run tests
 
 # Invoke jobs via workflows

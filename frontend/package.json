@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/preset-create-react-app": "^3.1.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.5",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "axios": "^0.21.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0"
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.4",
+    "babel-loader": "8.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,14 +45,14 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.0.27",
-    "@storybook/addon-knobs": "^6.0.27",
-    "@storybook/addon-links": "^6.0.27",
-    "@storybook/addon-storyshots": "^6.0.27",
-    "@storybook/addons": "^6.0.27",
-    "@storybook/react": "^6.0.27",
-    "coveralls": "^3.0.9",
-    "react-test-renderer": "^16.12.0",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-storyshots": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "coveralls": "^3.1.0",
+    "react-test-renderer": "^17.0.2",
     "storybook-react-router": "^1.0.8"
   }
 }

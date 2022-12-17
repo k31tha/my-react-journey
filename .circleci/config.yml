@@ -22,7 +22,8 @@ jobs:
       - node/install-packages:
           app-dir: "~/project/frontend"
           pkg-manager: yarn
-      #      - store_test_results:
+      - store_test_results:
+          path: './test-results'
       #          root: '~/project'
       #          paths:
       #              - .

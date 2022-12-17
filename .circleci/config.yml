@@ -20,5 +20,5 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn
           app-dir: '~/project/frontend'
-          - store_test_results:
+          store_test_results:
             path: test-results
